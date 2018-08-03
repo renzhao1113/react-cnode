@@ -1,0 +1,60 @@
+@primary: #0088cc;
+@success: #80bd01;
+@default: #e5e5e5;
+.cn-button {
+	border-radius: 5px;
+	&.large {
+		padding: 5px 10px;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+	&.small {
+		padding: 4px 8px;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+	&.mini {
+		padding: 2px 4px;
+		border-radius: 5px;
+		font-size: 12px;
+	}
+	&.primary {
+		background-color: @primary;
+		color: #fff;
+		&:active {
+			background-color: darken(@primary, 10%);
+		}
+	}
+	&.success {
+		background-color: @success;
+		color: #fff;
+		&:active {
+			background-color: darken(@success, 10%);
+		}
+	}
+	&.def {
+		background-color: @default;
+		color: #000;
+		&:active {
+			background-color: darken(@default, 10%);
+		}
+	}
+	&.text {
+		background-color: transparent;
+		color: #ccc;
+		&:hover {
+			color: #fff;
+		}
+	}
+	.rotate {
+		animation: rotate1 1s linear infinite;
+		transform-origin: 60% 50%;
+	}
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+@keyframes rotate1 {
+	from {transform: rotateZ(0)}
+	to {transform: rotateZ(360deg)}
+}
