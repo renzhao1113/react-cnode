@@ -1,7 +1,8 @@
 {
-  "name": "my-cnode",
+  "name": "react-cnode",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://renzhao1113.github.io/react-cnode",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
@@ -61,7 +62,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -106,6 +109,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
     "redux-devtools": "^3.4.1"
